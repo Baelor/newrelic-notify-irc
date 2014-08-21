@@ -3,7 +3,15 @@ require "yaml"
 require "cinch"
 require "json"
 
-config = YAML.load_file("config.yml")
+if (File.exists?("config.yml"))
+  config = YAML.load_file("config.yml")
+else
+  config = {
+    "server" => ENV["SERVER"],
+    "channel" => ENV["CHANNEL"],
+    "nick" => ENV["NICK"]
+  }
+end
 
 post "/" do
   if (params.has_key?("alert"))

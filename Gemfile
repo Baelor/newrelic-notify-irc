@@ -1,4 +1,4 @@
 source "https://rubygems.org"
-ruby "2.1.2"
-gem 'sinatra', '1.4.5'
-gem 'cinch', '2.2.3'
+ruby "2.3.0"
+gem 'sinatra', '1.4.6'
+gem 'cinch', '2.3.1'
